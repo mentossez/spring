@@ -1,4 +1,4 @@
-package com.learnspring.autowiring;
+package com.learnspring.autowiring.xml;
 
 public class Employee {
     EmployeeDetails employeeDetails;

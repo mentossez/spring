@@ -5,16 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.learnspring.autowiring.EmployeeDetails" name="employeeDetails" p:name="Ashish K" p:epn="69693232"/>
-    <bean class="com.learnspring.autowiring.Employee" name="employee" autowire="byName"/>
+    <bean class="com.learnspring.autowiring.xml.EmployeeDetails" name="employeeDetails" p:name="Ashish K" p:epn="69693232"/>
+    <bean class="com.learnspring.autowiring.xml.Employee" name="employee" autowire="byName"/>
 <!--    It will search bean named employeeDetails in config since employeeDetails obj is defined in Employee class-->
 
-<!--    <bean class="com.learnspring.autowiring.EmployeeDetails" name="SwarupaDevQa" p:name="Swarupa V" p:epn="98443325"/>-->
-<!--    <bean class="com.learnspring.autowiring.Employee" name="employee1" autowire="byType"/>-->
+<!--    <bean class="com.learnspring.autowiring.xml.EmployeeDetails" name="SwarupaDevQa" p:name="Swarupa V" p:epn="98443325"/>-->
+<!--    <bean class="com.learnspring.autowiring.xml.Employee" name="employee1" autowire="byType"/>-->
 <!--    It will search bean with type EmployeeDetails in config since obj with EmployeeDetails type is defined in Employee class-->
 
-<!--    <bean class="com.learnspring.autowiring.EmployeeDetails" name="KoartecTrading" p:name="Koartec Trading" p:epn="19992367"/>-->
-<!--    <bean class="com.learnspring.autowiring.Employee" name="employee2" autowire="constructor"/>-->
+<!--    <bean class="com.learnspring.autowiring.xml.EmployeeDetails" name="KoartecTrading" p:name="Koartec Trading" p:epn="19992367"/>-->
+<!--    <bean class="com.learnspring.autowiring.xml.Employee" name="employee2" autowire="constructor"/>-->
 <!--    This is straight forward, it will call constructor in Employee class -->
 
 </beans>
