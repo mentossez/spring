@@ -1,6 +1,16 @@
-package com.learnspring.autowiring.xml;
+package com.learnspring.autowiring.annotation;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+
+/*
+    You can use @Autowired annotation at property, settle and constructor
+    @Qualifier is used specify the name of bean, in case there are multiple beans, used along with @Annotation
+*/
 
 public class Employee {
+    @Autowired
+    @Qualifier("employeeDetails2")
     EmployeeDetails employeeDetails;
 
     public EmployeeDetails getEmployeeDetails() {

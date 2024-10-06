@@ -1,4 +1,4 @@
-package com.learnspring.autowiring.xml;
+package com.learnspring.autowiring.annotation;
 
 public class EmployeeDetails {
     private String name;
