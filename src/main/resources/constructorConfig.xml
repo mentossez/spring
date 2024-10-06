@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.learnspring.injections.constructor.UserRights" name="userRights">
+        <constructor-arg name="userRoles">
+            <set>
+                <value>ADMIN</value>
+                <value>Capturer</value>
+                <value>Authorizer</value>
+            </set>
+        </constructor-arg>
+    </bean>
+
+    <!-- constructor injecting using c schema -->
+    <bean class="com.learnspring.injections.constructor.User" name="user" c:partyId="1900054186023"
+          c:userRights-ref="userRights">
+        <!-- <constructor-arg ref="userRights"/>-->
+    </bean>
+
+    <!-- Ambiguity problem can be solved by type, index  -->
+    <bean class="com.learnspring.injections.constructor.Addition" name="addition">
+        <!--                <constructor-arg value="36"/>-->
+        <!--                <constructor-arg value="33"/>-->
+        <!--        <constructor-arg value="36" type="int"/>-->
+        <!--        <constructor-arg value="33" type="int"/>-->
+        <constructor-arg value="36" type="int" index="0"/>
+        <constructor-arg value="33" type="int" index="1"/>
+    </bean>
+
+</beans>

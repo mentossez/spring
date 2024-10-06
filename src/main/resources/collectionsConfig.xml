@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.learnspring.injections.collections.Classroom" name="classroom">
+
+        <property name="name" value="JASMINE"/>
+
+        <property name="students">
+            <list>
+                <value>Mr Ashish K</value>
+                <value>Mr Test user</value>
+                <null/>
+                <value>Mr Ajit Mehta</value>
+                <value/>
+                <value>Ms Swarupa V</value>
+                <value>Mr Saurav K</value>
+                <value>Ms Abhilasha B</value>
+                <value>Mr Test user</value>
+            </list>
+        </property>
+
+        <property name="subjects">
+            <set>
+                <value>Physics</value>
+                <value>Chemistry</value>
+                <value>Maths</value>
+                <value>English</value>
+                <null/>
+                <null/>
+                <value>Computer science</value>
+                <value>Physics</value>
+            </set>
+        </property>
+
+        <property name="subjectWeightage">
+            <map>
+                <entry key="Physics" value="5"/>
+                <entry key="Chemistry" value="5"/>
+                <entry key="Maths" value="4"/>
+                <entry key="English" value="3"/>
+                <entry key="Computer science" value="5"/>
+            </map>
+        </property>
+
+        <property name="studentRollNumbers">
+            <props>
+                <prop key="Mr Ashish K">10</prop>
+                <prop key="Mr Test user">20</prop>
+                <prop key="Mr Ajit Mehta">30</prop>
+                <prop key="Ms Swarupa V">40</prop>
+                <prop key="Mr Saurav K">50</prop>
+                <prop key="Ms Abhilasha B">60</prop>
+                <prop key="Mr Test user">70</prop>
+            </props>
+        </property>
+    </bean>
+</beans>

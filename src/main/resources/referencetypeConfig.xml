@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean class="com.learnspring.injections.referenceType.UserLoginDetails" name="loginDetailsBean" p:username="ashish4rip" p:password="q1w2e3r4t5y6"/>
+
+    <bean class="com.learnspring.injections.referenceType.User" name="user">
+        <property name="name" value="Mr Ashish K"/>
+        <property name="loginDetails" ref="loginDetailsBean"/>
+    </bean>
+
+</beans>

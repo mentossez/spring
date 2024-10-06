@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- This will enable all Annotations  -->
+    <context:annotation-config />
+
+    <!-- Initialisation and destroying will happen according to order of beans  -->
+
+    <bean class="com.learnspring.lifecycle.HomeLoanXmlConfig" name="homeLoan" p:amount="1200000"
+          init-method="init" destroy-method="destroy"/>
+
+    <bean class="com.learnspring.lifecycle.PersonalLoanInterfaces" name="personalLoan" p:amount="700000"/>
+
+    <bean class="com.learnspring.lifecycle.CarLoanAnnotations" name="carLoan" p:amount="400000"/>
+
+
+</beans>
