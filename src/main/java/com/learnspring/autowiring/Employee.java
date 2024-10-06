@@ -8,6 +8,7 @@ public class Employee {
     }
 
     public void setEmployeeDetails(EmployeeDetails employeeDetails) {
+        System.out.println("Setting value");
         this.employeeDetails = employeeDetails;
     }
 
