@@ -1,2 +1,4 @@
-package com.learnspring.standalone.collections;public class Employee {
+package com.learnspring.standalone.collections;
+
+public class Employee {
 }
